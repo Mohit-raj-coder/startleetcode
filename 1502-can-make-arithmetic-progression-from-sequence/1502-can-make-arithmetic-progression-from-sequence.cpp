@@ -1,18 +1,39 @@
 class Solution {
 public:
     bool canMakeArithmeticProgression(vector<int>& arr) {
-        // Step 1: Sort the array to order the elements properly
-        sort(arr.begin(), arr.end());
+        int n = arr.size();
+        int min_val = INT_MAX;
+        int max_val = INT_MIN;
         
-        // Step 2: Find the absolute distance between the first two elements
-        int diff = abs(arr[1] - arr[0]);
+        // Step 1: Find the minimum and maximum values
+        for (int num : arr) {
+            min_val = min(min_val, num);
+            max_val = max(max_val, num);
+        }
         
-        // Step 3: Verify the absolute distance remains constant throughout
-        for (int i = 2; i < arr.size(); i++) {
-            // Compare the absolute difference of current elements to our target
-            if (abs(arr[i] - arr[i-1]) != diff) {
-                return false; 
-            }
+        // Edge Case: If max and min are equal, difference is 0 (e.g., {5, 5, 5})
+        if (max_val == min_val) return true;
+        
+        // Step 2: Calculate the absolute common difference
+        // We use abs() to guarantee a positive number/magnitude
+        int total_span = abs(max_val - min_val);
+        
+        if (total_span % (n - 1) != 0) return false;
+        int diff = total_span / (n - 1);
+        
+        unordered_set<int> seen;
+        
+        // Step 3: Validate that every number maps to a valid index gap
+        for (int num : arr) {
+            // Find absolute distance from the minimum starting point
+            int distance = abs(num - min_val);
+            
+            if (distance % diff != 0) return false;
+            
+            // Duplicate check to prevent tracking the same step twice
+            if (seen.count(num)) return false;
+            
+            seen.insert(num);
         }
         
         return true;
