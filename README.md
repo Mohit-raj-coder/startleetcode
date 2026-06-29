@@ -30,8 +30,17 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0150-evaluate-reverse-polish-notation](https://github.com/Mohit-raj-coder/startleetcode/tree/master/0150-evaluate-reverse-polish-notation) |
+| [0233-number-of-digit-one](https://github.com/Mohit-raj-coder/startleetcode/tree/master/0233-number-of-digit-one) |
 ## Queue
 |  |
 | ------- |
 | [2073-time-needed-to-buy-tickets](https://github.com/Mohit-raj-coder/startleetcode/tree/master/2073-time-needed-to-buy-tickets) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0233-number-of-digit-one](https://github.com/Mohit-raj-coder/startleetcode/tree/master/0233-number-of-digit-one) |
+## Recursion
+|  |
+| ------- |
+| [0233-number-of-digit-one](https://github.com/Mohit-raj-coder/startleetcode/tree/master/0233-number-of-digit-one) |
 <!---LeetCode Topics End-->
