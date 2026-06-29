@@ -2,21 +2,22 @@
 
 class Solution {
 public:
-    int timeRequiredToBuy(std::vector<int>& tickets, int k) {
-        int total_time = 0;
-        int target_tickets = tickets[k];
+    int timeRequiredToBuy(std::vector<int>& tickets, int ke) {
         
-        for (int i = 0; i < tickets.size(); i++) {
-            if (i <= k) {
-                // People before or at k can buy up to target_tickets
-                total_time += std::min(tickets[i], target_tickets);
-            } else {
-                // People after k can buy up to target_tickets - 1
-                total_time += std::min(tickets[i], target_tickets - 1);
-            }
-        }
-        
-        return total_time;
-    }
+        int n=tickets.size();
+
+        int result=0;
+int k=tickets[ke];
+for(int i=0;i<n;i++){
+if(i<=ke){
+
+    result+=min(tickets[i],k);
+}else{
+    result+=min(tickets[i],k-1);
+}
+}
+return result;
+}
+
 };
 
