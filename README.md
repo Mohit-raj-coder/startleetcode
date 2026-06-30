@@ -47,4 +47,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0233-number-of-digit-one](https://github.com/Mohit-raj-coder/startleetcode/tree/master/0233-number-of-digit-one) |
+## Linked List
+|  |
+| ------- |
+| [2074-reverse-nodes-in-even-length-groups](https://github.com/Mohit-raj-coder/startleetcode/tree/master/2074-reverse-nodes-in-even-length-groups) |
 <!---LeetCode Topics End-->
